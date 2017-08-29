@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+	<body>
+		<!-- <p> This is my own example</p> -->
+		<button onclick = myDateDemo()>Click to try</button>
+		<p id="textDemo">Text goes here for replacement replacement reptition</p>
+		
+		<script>
+			function myFunction(){
+				var orgStr = document.getElementById("textDemo").innerHTML; 
+				document.getElementById("textDemo").innerHTML = orgStr.replace(/Replacement/ig,"replaced");
+				}
+			function myDateDemo(){
+				//Date methods
+				/*var d = new Date("2015-03-01T12:12:12+05:30");
+				var d = new Date();
+				d.setFullYear(2020,0,12);
+				d.setDate(d.getDate() + 50);
+				var msec = Date.parse("March 24,2012");
+				var d = new Date(1332543600000);
+				
+				document.getElementById("textDemo").innerHTML = d; */
+				
+				//Date demo
+				/*var today = new Date();
+				var someday = new Date();
+				someday.setFullYear(2100, 0 ,12);
+				if(someday > today) {
+					document.getElementById("textDemo").innerHTML = " Today is is before " + someday;
+					}else {
+						document.getElementById("textDemo").innerHTML = " Today is after " + someday;
+						}
+						var car = ["Car1","Car2",46];
+						document.getElementById("textDemo").innerHTML = car;*/
+						
+				//Array demo 
+				/*var arList = ["Banana","Apple","Kwi"];
+				arList.sort();
+				var text = "<ul>";
+				for( i=0; i < arList.length;i++){
+					text += "<li>" + arList[i] + "</li>";
+					}
+				text += "</ul>";
+				document.getElementById("textDemo").innerHTML = text;*/
+				 
+				 //Object demo 
+				/*var person = {firstName:"Porkodi",lastName:"Natarajan",age:35,fullName: function() { return this.firstName + " " + this.lastName}};
+				document.getElementById("textDemo").innerHTML=person.fullName() + " is " + person.age + " years old";
+				//document.getElementById("textDemo").innerHTML = person.firstName;*/
+				
+				//Array methods demo
+				/*var arr=["Apple","Banana","Orange","Pineapple"];
+				//document.getElementById("textDemo").innerHTML = arr.toString();
+				document.getElementById("textDemo").innerHTML = arr.join("*");*/
+				
+				//Array pop() method demo returns poped last element of an array
+				/*var fruits=["Banana","Apple","Orange","Mango"];
+				var x = fruits.pop();
+				document.getElementById("textDemo").innerHTML = x;*/
+				
+				//Array push() returns index of pushed elements position
+				/*var fruits=["Banana","Apple","Orange","Mango"];
+				var x = fruits.push("Kiwi");
+				document.getElementById("textDemo").innerHTML = x;*/
+				
+				//Array shift() method adds an element in the begining of an array
+				/*var fruits=["Banana","Apple","Orange","Mango"];
+				var x = fruits.shift();
+				document.getElementById("textDemo").innerHTML = fruits;*/
+				
+				//Array unshift() method adds an element at the begining of an array and returns new length
+				/*var fruits=["Banana","Apple","Orange","Mango"];
+				var x = fruits.unshift("Kiwi");
+				document.getElementById("textDemo").innerHTML = fruits;*/
+				
+				// Changing array elements
+				/*var fruits=["Banana","Apple","Orange","Mango"];
+				fruits[fruits.length +1] = "Litche";
+				//delete fruits[2];
+				document.getElementById("textDemo").innerHTML = fruits;*/
+				
+				//Array splice() method
+				var fruits=["Banana","Apple","Orange","Mango"];
+				var x = fruits.splice(2,"Litche","Avacado"); 
+				//fruits.splice(0,1);
+				document.getElementById("textDemo").innerHTML = fruits;
+				
+				
+				//Array slice() method
+				/*var fruits=["Banana","Apple","Orange","Mango"];
+				var arr = fruits.slice(1);
+				document.getElementById("textDemo").innerHTML = arr;*/
+
+				
+				
+				
+				
+				}
+		</script>
+	</body>
+</html>

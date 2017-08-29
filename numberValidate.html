@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<head>
+		<script>
+			function validateInput(){
+				var inp = document.forms["myForm"]["numb"].value;
+				console.log(inp);
+				if( inp < 1 || inp > 10){
+					alert("Number not in range");
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form name="myForm" onsubmit="return validateInput()" method="post" >
+			Number:<input name="numb" type="number">
+			<input type="submit" text="Submit">
+		</form>
+	</body>
+</html>

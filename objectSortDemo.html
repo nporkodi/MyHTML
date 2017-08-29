@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+	<body>
+	<p id="data"></p>
+	<p id="demo"></p>
+	<button onclick="sortObjArray()">Sort Objects</button>
+	<button onclick="sortByCarType()">Sort by Car Type</button>
+	
+		<script>
+			var cars=[{type:"Volkswagan",year:1992},{type:"Opel",year:1986},{type:"Audi",year:2001}];
+			displayCars();
+			
+			function sortObjArray(){
+				cars.sort(function(a,b){return a.year - b.year});
+				displayCars();
+				}
+			function displayCars(){
+				var data="";
+				for(i=0;i<cars.length;i++)
+					data += cars[i].type + " " + cars[i].year + "<br>";
+				//return data;
+				document.getElementById("data").innerHTML=data;
+				}
+				
+				
+				function sortByCarType(){
+				cars.sort(function (a,b){ 
+					var x = a.type.toLowerCase();
+					var y = b.type.toLowerCase();			
+					if (x<y){return -1;}
+					if (x>y) {return 1;}
+					return 0;
+					});
+				displayCars();
+				}
+		</script>
+	</body>
+</html>

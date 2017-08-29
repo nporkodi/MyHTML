@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+	<body>
+		<p id="demo">
+		
+		<script>
+			try{
+				eval("alert('msg)");
+			}
+			catch(err){
+				document.getElementById("demo").innerHTML=err.name;
+			}
+			debugger;
+			num=10;
+			try{
+				num.toUpperCase();
+			}
+			catch(er){
+				document.getElementById("demo").innerHTML+="<br>"+er.name;
+			}
+			try{	
+				num=n1+10;
+			}
+			catch(e){
+					document.getElementById("demo").innerHTML+="<br>"+e.name;
+			}
+			console.log(num);
+							
+		</script>
+	</body>
+</html>

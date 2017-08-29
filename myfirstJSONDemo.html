@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<body>
+		<h1>Employee information</h1>
+		<p id="demo"> </p>
+		<script>
+			var txts = '{"employees":[' +
+					  '{"firstName":"Porkodi","lastName":"Natarajan","age":"35"},'+
+					  '{"firstName":"Rajasekaran","lastName":"Jeganathan","age":"37"},'+
+					  '{"firstName":"Shri Nethra","lastName":"Rajasekaran","age":"10"},'+
+					  '{"firstName":"Sembian","lastName":"Rajasekaran","age":"4"}]}';
+			
+			//var msg = document.getElementById("demo");
+			var obj = JSON.parse(txts);
+			var dis="";
+			//console.log(obj);
+			//document.getElementById("demo").innerHTML = obj.employees[1].firstName + "<br>" + obj.employees[1].lastName + "<br>" + obj.employees[1].age;;
+			for(i=0;i<obj.employees.length;i++){
+				dis += obj.employees[i].firstName + "<br>" + obj.employees[i].lastName + "<br>" + obj.employees[i].age + "<br>" + "<br>" ;
+			}
+			document.getElementById("demo").innerHTML = dis;
+		</script>
+	</body>
+</html>

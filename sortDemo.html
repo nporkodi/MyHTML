@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<body>
+		
+		<button onclick="sortAlpha()" >Sort Alphabetically</button>
+		<button onclick ="sortNum()" >Ascending order</button>
+		<button onclick="descend()">Descending order</button>
+		<button onclick="myFindMin()">Find minimum</button>
+		<button onclick="myFindMax()">Find maximum</button>
+		<p id="demosam"></p>
+		<p id="demo"></p>
+		
+		<script>
+			var points = [40,20,60,80,10,100];
+			document.getElementById("demosam").innerHTML = points;
+			function sortAlpha(){
+				points.sort();
+				document.getElementById("demo").innerHTML = points;
+				
+			}
+			
+			function sortNum(){
+				//points.sort(function(a,b){return a-b});
+				for(i=0;i<points.length;i++){
+					for(j=i+1;j<points.length;j++){
+						if(points[j] - points[i] < 0){}
+						else {
+							temp = points[i];
+							points[i]=points[j];
+							points[j]=temp;
+							}
+						}
+					}
+				document.getElementById("demo").innerHTML = points;
+			}
+			
+			function descend(){
+				points.sort(function(a,b){return b-a});
+				document.getElementById("demo").innerHTML = points;
+			}
+			
+			function findMin(){
+				document.getElementById("demo").innerHTML = Math.min.apply(null,points);
+			}
+
+			function findMax(){
+				document.getElementById("demo").innerHTML = Math.max.apply(null,points);
+			}
+			
+			function myFindMin(){
+				var len = points.length;
+				var min = points[len-1];
+				while(len--){
+					if(points[len] < min)
+						min = points[len];
+				}
+				document.getElementById("demo").innerHTML = min;
+			}
+			
+			function myFindMax(){
+				var len = points.length;
+				var max = points[len-1];
+				while(len--){
+					if(points[len] > max)
+						max = points[len];
+				}
+				document.getElementById("demo").innerHTML = max;
+			}
+			
+		</script>
+	</body>
+</html>

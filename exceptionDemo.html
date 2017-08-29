@@ -1,0 +1,29 @@
+<!doctype html>	
+<html>
+	<input id="demo" type="text">
+	<button onclick="myFunction()">Validate</button>
+	<p id="msg">
+	<body>
+		
+		<script>
+		function myFunction(){
+			var ms=document.getElementById("msg");
+			ms.innerHTML="";
+			var txt=document.getElementById("demo").value;
+			try{
+				if (isNaN(txt )) throw "not a number";
+				if(txt=="") throw "empty";
+				txt=Number(txt);
+				if(txt < 5) throw "below range";
+				if(txt > 10) throw "out of range";
+			}
+			catch(err){
+				ms.innerHTML="Input is " + err;
+				}
+			finally{
+				document.getElementById("demo").value="";
+				}
+			}
+		</script>
+	</body>
+</html>

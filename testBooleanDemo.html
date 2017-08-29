@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<body>
+		<p id="demo">Boolean demo</p>
+		<button onclick="testBooDemo()"	>Test boolean</button>
+		<script>
+			function testBooDemo(){
+				var testBoo = false;
+				var testObj = new Boolean(false);
+				var testObj1 = new Boolean(false);
+				//if(testBoo == testObj)
+				//if(testBoo === testObj)
+				if(testObj == testObj1)
+					document.getElementById("demo").innerHTML = "Test passed";
+				else
+					document.getElementById("demo").innerHTML = "Test failed";
+				
+			}
+		</script>
+	</body>
+</html>

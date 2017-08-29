@@ -1,0 +1,20 @@
+<html>
+	<p id="demo">
+	<body>
+		<script>
+			function Person(first,last,age){
+				this.firstName = first;
+				this.lastName = last;
+				this.age = age;
+				//this.fullName = function(){ return this.firstName + " " + this.lastName;}
+			}
+			Person.prototype.fullName = function(){
+				return this.firstName + " " + this.lastName;
+			}
+			var son = new Person("Sembian","Rajasekaran",4);
+			var father = new Person("Rajasekaran","Jeganathan",37);
+			var x=123;
+			document.getElementById("demo").innerHTML = son.fullName() +"<br>"+ father.fullName();
+		</script>
+	</body>
+</html>

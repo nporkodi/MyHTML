@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<body>
+		
+		Fruit name <input id="fruit" type="text" value="Apple">
+		<button onclick="switchDemo()">Click here</button>
+		<p id="demo">
+		<script>
+			function switchDemo(){
+				var fruitName = document.getElementById("fruit").value;
+				switch(fruitName.toLowerCase()){
+					case "apple":
+						txt = "How is Apple?";
+						break;
+					case "orange":
+						txt = "I love Oranges";
+						break;
+					default:
+						txt = "I don't know what you are talking about";
+					}
+				document.getElementById("demo").innerHTML=txt;
+			}
+		</script>
+	</body>
+</html>

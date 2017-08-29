@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+	<body>
+		<input id="ip1" type="number" min="10" max="100" required>
+		<button onclick="myFunction()">Click me</button>
+		<p id="er">
+		<script>
+			function myFunction(){
+				var obj = document.getElementById("ip1");
+				//console.log(obj.willValidate);
+				/*if(obj.checkValidity() == false)
+					document.getElementById("er").innerHTML=obj.validationMessage;*/
+				if(obj.validity.rangeOverflow == true)
+					document.getElementById("er").innerHTML = "Value out of range my msg";
+			}
+		</script>
+	</body>
+</html>
