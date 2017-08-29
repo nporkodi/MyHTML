@@ -1,0 +1,13 @@
+<!doctype>
+<html>
+	<body>
+		<p id = "demo">
+		<script>
+			var add = (function(){ var counter = 0; console.log(counter); return function(){ console.log(counter);return counter += 1;}})();
+			add();
+			add();
+			document.getElementById("demo").innerHTML = add();
+			
+		</script>
+	</body>
+</html>

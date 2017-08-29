@@ -1,0 +1,33 @@
+<!doctype html>	
+<html>
+	<p id="demo">
+	<body>
+		<script>
+		
+			function findMax(){
+				//console.log(arguments.length);
+				if(arguments.length > 0)
+				{
+					var max = arguments[0];
+					//console.log(arguments[0]);
+					for(i=1; i<arguments.length; i++){
+						if(max < arguments[i]){
+							//console.log(arguments[i]);
+							max = arguments[i];
+						}
+					}
+					return max;
+				}
+				return 0;
+			}
+			
+			function findSum(){
+				var sum = 0;
+				for(i=0; i<arguments.length; i++)
+					sum += arguments[i];
+				return sum;
+			}
+			document.getElementById("demo").innerHTML = Math.max.apply(null,[1,4,12,65,11,89]); //findMax([1,4,12,65,11,89]); 
+		</script>
+	</body>
+</html>
