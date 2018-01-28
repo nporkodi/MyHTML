@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+	<body>
+		<button id="btn1">Click me</button>
+		<p id="demo">
+		<script>
+			document.getElementById("btn1").addEventListener("click",displayText);
+			function displayText(){
+				document.getElementById("demo").innerHTML = "From action listener";
+			}
+		</script>
+	</body>
+</html>

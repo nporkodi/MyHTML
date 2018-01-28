@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<body>
+		<form name="myForm" >
+			Last name:<input name="lname" type="text" value="Porkodi"> <br><br>
+			First name:<input name="fname" type="text" value="Natarajan"> <br><br>
+			<input type="submit" value="Submit">
+		</form>
+		<button onclick="myFunction()">Click here to try</button>
+		<p id="demo">
+		<script>
+			function myFunction(){
+				var x = document.forms["myForm"];
+				var txt = "";
+				for(i=0;i<x.length;i++)
+					txt += x.elements[i].value + "<br>";
+				document.getElementById("demo").innerHTML = txt;
+			}
+		</script>
+	</body>
+</html>

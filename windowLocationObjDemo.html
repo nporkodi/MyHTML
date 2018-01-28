@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<body>
+		<button onclick="myFunction()">Click me</button>
+		<input type="button" value="Assign new link" onclick="assignNew()">
+		<p id="demo"></p>
+		<script>
+		function assignNew(){
+			window.location.assign("file:///C:/Users/home/Documents/GitHub/MyHTML/numberValidate.html");
+		}
+			function myFunction(){
+				var x = document.getElementById("demo");
+				x.innerHTML = "<br>" + window.location.href;
+				x.innerHTML += "<br>" + window.location.pathname;
+				x.innerHTML += "<br>" + window.location.hostname;
+				x.innerHTML += "<br>" + window.location.protocol;
+				x.innerHTML += "<br>" + window.location.port;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+	<body>
+		<p> Para1 </p>
+		<p> Para2 </p>
+		<p> Para3 </p>
+		<p id="demo">df</p>
+		<script>
+			var myNodeList = document.querySelectorAll("p");
+			myNodeList[3].childNodes[0].nodeValue = myNodeList[3].attributes["id"].value;
+			//alert("hello "+myNodeList[3].childNodes[0]);
+			for(i=0;i<myNodeList.length;i++){
+				myNodeList[i].style.backgroundColor = "red";
+			}
+			alert("fd  " + myNodeList[3].innerHTML);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: red;
+}
+</style>
+<body>
+
+<p>
+<button id="startbtn" onclick="myMove();this.disabled = true;">Start</button>
+<button onclick="myStop()">Stop</button>
+</p> 
+
+<div id ="container">
+<div id ="animate">
+</div></div>
+
+<script>
+var pos = 0;
+var dir = "forward";
+ var elem = document.getElementById("animate");  
+ var btnStart =  document.getElementById("startbtn");  
+function myMove() {
+ 
+  //clearInterval(id);   
+  id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id); 
+	   dir = "backward";
+      myMoveBack();
+            
+    } else if(dir == "forward"){
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+	else{
+		 clearInterval(id); 
+	      myMoveBack();
+	}
+  }
+}
+function myMoveBack() {
+  //var elem = document.getElementById("animate");
+  //clearInterval(id); 
+  id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 0) {
+      clearInterval(id);
+	   dir = "forward";
+      myMove();
+            
+    } else if(dir == "backward"){
+      pos--; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+	else{
+		clearInterval(id);
+	     myMove();
+	}
+  }
+}
+function myStop(){
+	clearInterval(id);
+	btnStart.disabled = false;
+	
+}
+</script>
+
+</body>
+</html>

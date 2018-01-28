@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+	<body>
+		<p> Para1 </p>
+		<p> Para2 </p>
+		<p> Para3 </p>
+		<p id="demo">
+		<script>
+			var myCollection = document.getElementsByTagName("p");
+			document.getElementById("demo").innerHTML = myCollection.length;
+			for(i=0;i<myCollection.length;i++){
+				myCollection[i].style.backgroundColor = "red";
+			}
+			alert(myCollection["demo"].innerHTML);
+		</script>
+	</body>
+</html>

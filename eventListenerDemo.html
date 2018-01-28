@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<body>
+		<button id="btn1">Click me</button>
+		<p id="demo">
+		<p id="demo1">
+		<script>
+		window.addEventListener("resize",function(){alert("Resize happend");});
+			document.getElementById("btn1").addEventListener("click",displayText);
+			document.getElementById("btn1").addEventListener("click",displayText2);
+			document.getElementById("btn1").addEventListener("click",function(){myFuncArgs(4,5);});
+			function displayText(){
+				document.getElementById("demo").innerHTML = "From event listener";
+			}
+			function displayText2(){
+				document.getElementById("demo1").innerHTML = "From event listener2";
+			}
+			
+			function myFuncArgs(a,b){
+				alert("Result is " + a*b);
+			}
+		</script>
+	</body>
+</html>

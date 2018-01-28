@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+	<body>
+		<button onclick="timeout = setInterval(myFunction,1)">Start Alert</button>
+		<button onclick="clearInterval(timeout);">Stop</button>
+		<p id="demo"></p>
+		<script>
+			function myFunction(){
+				document.getElementById("demo").innerHTML = new Date();
+			}
+		</script>
+	</body>
+</html>

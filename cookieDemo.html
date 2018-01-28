@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<body onload="checkCookie()">
+	
+		<script>
+			function setCookie(cname,cvalue,expdays){
+				var d = new Date();
+				d.setTime(d.getTime()+ (expdays * 60 * 60 * 24 * 1000));
+				var expiry = "expires=" + d.toUTCString();
+				document.cookie = cname +"=" + cvalue + "," + expiry + ",path=/";
+				console.log("Set " + document.cookie );
+			}
+			function getCookie(cname){
+				var name = cname + "=";
+				var decodedCookie = decodeURIComponent(document.cookie);
+				var ca = decodedCookie.split(',');
+				//var ca = document.cookie.split(';');
+				console.log("Cookie " + document.cookie + "<<<< ca " + ca);
+				for(i=0;i<ca.length;i++){
+					var c = ca[i];
+					while(c.charAt(0) == ' '){
+						c = c.substring(1);
+					}
+					console.log("aa " + c);
+					if(c.indexOf(name) == 0){
+						console.log(c.substring(name.length,c.length));
+						return c.substring(name.length,c.length);
+					}
+				}
+				return "";
+						
+			}
+			
+			function checkCookie(){
+				var user = getCookie("username");
+				console.log(user);
+				if(user != ""){
+					alert("Welcome again " + username);
+				}
+				else{
+					user = prompt("Enter user name:","");
+					if(user != null && user !="")
+						setCookie("username",user,365);
+				}
+						
+			}
+		</script>
+	</body>
+</html>

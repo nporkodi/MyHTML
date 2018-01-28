@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<body>
+		<div id="div1">
+			<p> Para1 </p>
+			<p> Para2 </p>
+			<button onclick="document.body.childNodes[1].removeChild(document.body.childNodes[1].childNodes[1]);">Remove child</button>
+		</div>
+		<script>
+			var para = document.createElement("p");
+			var textNode = document.createTextNode("Para3");
+			//var parentDiv = document.body.childNodes[0];
+			var newChildNode = document.createElement("p");
+			var newTextNode = document.createTextNode("ParaNew");
+			newChildNode.appendChild(newTextNode);
+			para.appendChild(textNode);
+			document.getElementById("div1").appendChild(para);
+			document.body.childNodes[1].insertBefore(newChildNode,document.body.childNodes[1].childNodes[2]);
+			//alert(document.body.childNodes[1],childNode[);
+		</script>
+	</body>
+</html>

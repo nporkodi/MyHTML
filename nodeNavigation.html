@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+	<body>
+		<p id="demo" fontSize="4px">Here goes the text</p>
+		<script>
+			//alert(document.getElementById("demo").firstChild.nodeValue);
+			//alert(document.getElementById("demo").childNodes[0].nodeValue);
+			alert(document.getElementById("demo").parentNode.nodeName);
+			alert(document.getElementById("demo").parentNode.nodeValue);
+			//alert(document.getElementById("demo").attributes[1].name);
+			alert("aaaa  " + document.getElementById("demo").childNodes[0].parentNode.attributes["id"].value);
+			//alert(document.body.innerHTML);
+			//alert(document.documentElement.innerHTML);
+			
+		</script>
+	</body>
+</html>
