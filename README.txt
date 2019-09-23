@@ -1,3 +1,3 @@
 New feature added.
 New line inserted.
-Sample for merge.
+Sample for merge4.
