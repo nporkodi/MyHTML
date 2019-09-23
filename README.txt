@@ -1,2 +1,3 @@
 New feature added.
-New line added.
+New line inserted.
+Sample text for merge.
